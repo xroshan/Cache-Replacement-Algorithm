@@ -1,0 +1,15 @@
+
+data should look like
+
+(counter) (key) (hit or miss)
+
+0 122 0
+1 323 1
+
+
+
+to set color:
+    set pal defined ( 0 "red", 1 "green")
+
+to plot: 
+    plot ('t.dat') with points palette

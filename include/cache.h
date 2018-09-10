@@ -59,7 +59,7 @@ typedef struct
 cache *cache_create(cache_type t, int capacity, int Lhirs_size);
 void cache_free(cache *c);
 
-void cache_get(cache *c, int addr);
+int cache_get(cache *c, int addr);
 void cache_print_stats(cache *c);
 
 cache_lru *cache_lru_create(int capacity);

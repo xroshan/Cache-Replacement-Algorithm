@@ -27,7 +27,7 @@ cache *cache_create(cache_type t, int capacity, int Lhirs_size)
   return c;
 }
 
-void cache_get(cache *c, int addr)
+int cache_get(cache *c, int addr)
 {
   c->requests++;
   int res = 0;
@@ -46,7 +46,11 @@ void cache_get(cache *c, int addr)
   if (res == 1)
   {
     c->hits++;
+
+    return 1;
   }
+
+  return 0;
 }
 
 void cache_free(cache *c)
